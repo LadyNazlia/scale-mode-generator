@@ -3,6 +3,7 @@ document.querySelector("#scaleBut").addEventListener('click', scaleSelect)
 document.querySelector("#bothBut").addEventListener('click', genBoth)
 document.querySelector("audio").addEventListender('click', toggleAudio)
 
+
 //Chooses random scale and displays it
 function scaleSelect() {
     const scale = ["C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B"];
@@ -37,11 +38,44 @@ function genBoth() {
 //play/pause button functionality
 
 function toggleAudio() {
-    if (Audio.paused) {
-        Audio.play();
+    if (audio.paused) {
+        audio.play();
         playerButton.innerHTML = pauseIcon;
     } else {
-        Audio.pause();
+        audio.pause();
         playerButton.innerHTML = playIcon;
+    }
+}
+
+//play scale based on what is generated with genBoth()
+
+function playAudio() {
+    
+}
+
+//Scale objects with modes as methods?
+
+const scaleAFlat = {
+    aeolian: function() {
+       const audio = document.querySelector("audio")
+       audio.src = ""
+    }
+    dorian: function() {
+        
+    }
+    ionian: function() {
+        
+    }
+    locrian: function() {
+        
+    }
+    lydian: function() {
+        
+    }
+    mixolydian: function() {
+        
+    }
+    phrygian: function() {
+        
     }
 }
