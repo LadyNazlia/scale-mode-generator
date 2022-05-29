@@ -1,7 +1,7 @@
 document.querySelector("#modeBut").addEventListener('click', modeSelect)
 document.querySelector("#scaleBut").addEventListener('click', scaleSelect)
 document.querySelector("#bothBut").addEventListener('click', genBoth)
-
+document.querySelector("audio").addEventListender('click', toggleAudio)
 
 //Chooses random scale and displays it
 function scaleSelect() {
@@ -32,4 +32,16 @@ function modeSelect() {
 function genBoth() {
     scaleSelect();
     modeSelect();
+}
+
+//play/pause button functionality
+
+function toggleAudio() {
+    if (Audio.paused) {
+        Audio.play();
+        playerButton.innerHTML = pauseIcon;
+    } else {
+        Audio.pause();
+        playerButton.innerHTML = playIcon;
+    }
 }

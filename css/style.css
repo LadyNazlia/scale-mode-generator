@@ -61,7 +61,10 @@ input {
   height: 20%;
 }
 
-
+audio {
+  margin: 0 25% 3% 25%;
+  background-color: red;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
