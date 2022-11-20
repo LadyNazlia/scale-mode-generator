@@ -11,7 +11,7 @@
 /* LAYOUT
 /*******************************************/
 
-body {
+/* body {
   background-image: url(img/music-note-BG.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -64,8 +64,103 @@ input {
 audio {
   margin: 0 25% 3% 25%;
   background-color: red;
-}
+} */
 
 /******************************************
-/* ADDITIONAL STYLES
+/* Index2 STYLES
 /*******************************************/
+
+html {
+  background-color: black;
+  color: whitesmoke;
+}
+container
+
+.title h1 {
+  text-align: center;
+}
+
+.gridItem1 {
+  grid-area: nav;
+ 
+}
+.gridItem2 {
+  grid-area: scale;
+
+}
+
+.gridItem3 {
+  grid-area: mode;
+ 
+}
+
+.gridItem4 {
+  grid-area: buttons;
+}
+
+.gridItem5 {
+  grid-area: audioPlayer;
+  background-color: #666666;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+  'nav scale mode'
+  'nav buttons buttons'
+  'nav audioPlayer audioPlayer';
+  padding: 10px;
+  gap: 10px;
+ height: 100%
+}
+.scale, .mode, .buttons, .nav, .audioPlayer {
+  border: 2px solid whitesmoke; 
+  border-radius: 25px;
+}
+
+.scale, .mode {
+  height: 200px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+}
+
+input {
+  height: 25px;
+  margin: 1.5%;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:25px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size: 0.85rem;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+h3, h4 {
+  margin-top: 1%;
+}
+
+audio {
+  width: 100%;
+  border-radius: 25px;
+  padding: 2%;
+  color: whitesmoke;
+}
+
+footer {
+  text-align: center;
+  font-size: medium;
+}

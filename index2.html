@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+	</head>
     <title>Musical Scale & Mode Generator</title>
 </head>
 <body>
-    <section class="container">
-        <aside class="nav">
-
-        </aside>
-        <section class="scale">
-            <h3>Scale:</h3>
-        </section>
-        <section class="mode">
-            <h3>Mode:</h3>
-        </section>
-        <section class="buttons">
-            
-        </section>
-        <section class="audioPlayer">
-
-        </section>
+    <section class="title">
+        <h1>Musical Scale & Mode Generator</h1>
     </section>
+    <main class="container">
+        <aside class="nav gridItem1">
+            <ul>
+                <li>placeholder 1</li>
+                <li>placeholder 2</li>
+                <li>placeholder 3</li>
+            </ul>
+        </aside>
+        <section class="scale gridItem2">
+            <h3>Scale:</h3>
+            <h4 id="scale"></h4>
+        </section>
+        <section class="mode gridItem3">
+            <h3>Mode:</h3>
+            <h4 id="mode"></h4>
+        </section>
+        <section class="buttons gridItem4">
+            <input id="scaleBut" type="button" value="Generate Scale">
+
+			<input id="modeBut" type="button" value="Generate Mode">
+
+			<input id="bothBut" type="button" value="Scale & Mode">
+        </section>
+        <section class="audioPlayer gridItem5">
+            <audio id="player" controls>
+				<source src = "" type = "audio/wav">
+			 </audio>
+        </section>
+    </main>
     <footer>
         <h6>Created by Amanda Faulkenberry</h6>
     </footer>
 </body>
-
+    <script type="text/javascript" src="js/main.js"></script>
 </html>

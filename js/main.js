@@ -14,7 +14,7 @@ function scaleSelect() {
 
     console.log(randScale);
 
-    document.querySelector("#scale").innerHTML = `Scale: ${randScale}`;
+    document.querySelector("#scale").innerHTML = `${randScale}`;
    
 }
 
@@ -26,7 +26,7 @@ function modeSelect() {
 
     let randMode = mode[rand_index2];
 
-    document.querySelector("#mode").innerHTML = `Mode: ${randMode}`;
+    document.querySelector("#mode").innerHTML = `${randMode}`;
 }
 
 //Chooses random mode and scale and displays both
