@@ -1,7 +1,7 @@
 document.querySelector("#modeBut").addEventListener('click', modeSelect)
 document.querySelector("#scaleBut").addEventListener('click', scaleSelect)
 document.querySelector("#bothBut").addEventListener('click', genBoth)
-document.querySelector("audio").addEventListender('click', toggleAudio)
+document.querySelector("audio").addEventListener('click', toggleAudio)
 
 
 //Chooses random scale and displays it
@@ -50,7 +50,27 @@ function toggleAudio() {
 //play scale based on what is generated with genBoth()
 
 function playAudio() {
-    
+    let selectScale = document.getElementById("#scale").innerHTML
+    let selectMode = document.getElementById("#mode").innerHTML
+
+    if (selectScale === "Scale: Ab") {
+        let audio = document.querySelector("audio")
+        if(selectMode === "Mode: Aeolian") {
+            audio.src = scaleAFlat.aeolian
+        } else if(selectMode === "Mode: Dorian") {
+            audio.src = scaleAFlat.dorian
+        } else if(selectMode === "Mode: Ionian") {
+            audio.src = scaleAFlat.ionian
+        } else if(selectMode === "Mode: Locrian") {
+            audio.src = scaleAFlat.locrian
+        } else if(selectMode === "Mode: Lydian") {
+            audio.src = scaleAFlat.lydian
+        } else if(selectMode === "Mode: Mixolydian") {
+            audio.src =  scaleAFlat.mixolydian
+        } else if(selectMode === "Mode: Phrygian") {
+            audio.src = scaleAFlat.phrygian
+        }
+    } 
 }
 
 //Scale objects with modes as methods?
