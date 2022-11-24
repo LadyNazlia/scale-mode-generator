@@ -74,15 +74,13 @@ html {
   background-color: black;
   color: whitesmoke;
 }
-container
 
-.title h1 {
-  text-align: center;
+.gridItem0 {
+  grid-area: title;
 }
 
 .gridItem1 {
   grid-area: nav;
- 
 }
 .gridItem2 {
   grid-area: scale;
@@ -106,14 +104,16 @@ container
 .container {
   display: grid;
   grid-template-areas: 
+  'title title title'
   'nav scale mode'
   'nav buttons buttons'
   'nav audioPlayer audioPlayer';
   padding: 10px;
-  gap: 10px;
- height: 100%
+  gap: 20px;
+  height: 100%;
+  grid-template-rows: 33px -1fr;
 }
-.scale, .mode, .buttons, .nav, .audioPlayer {
+.title, .scale, .mode, .buttons, .nav, .audioPlayer {
   border: 2px solid whitesmoke; 
   border-radius: 25px;
 }
@@ -121,13 +121,30 @@ container
 .scale, .mode {
   height: 200px;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+
+.nav {
+  text-align: center;
+  height: 400px;
+  font-size: 2rem;
+  width: 50%;
 }
 
 .buttons {
   display: flex;
   justify-content: space-around;
   height: 50px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 input {
@@ -161,6 +178,40 @@ audio {
 }
 
 footer {
+  margin-top: 1%;
   text-align: center;
   font-size: medium;
+  background: white;
+  height: 20px;
+  width: 100%;
+}
+
+img {
+
+  height: 200px;
+  width: 100%;
+}
+
+/* .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  width: 50%;
+}
+
+.nav h3 {
+  width: 75%;
+  margin-top: -75px;
+}
+
+.modeName {
+  width: 75%%;
+  margin: 1% 12%;
+} */
+
+p {
+  font-size: 1rem;
+  width: 75%;
+  margin: 1% 12%;
 }
