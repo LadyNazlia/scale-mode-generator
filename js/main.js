@@ -2,6 +2,7 @@ document.querySelector("#modeBut").addEventListener('click', modeSelect)
 document.querySelector("#scaleBut").addEventListener('click', scaleSelect)
 document.querySelector("#bothBut").addEventListener('click', genBoth)
 // document.querySelector("audio").addEventListener('click', toggleAudio)
+document.querySelector("#bothBut").addEventListener('click', playAudio)
 
 
 //Chooses random scale and displays it
@@ -33,6 +34,10 @@ function genBoth() {
     modeSelect();
 }
 
+//Testing to see if src can be target for change
+
+
+
 //play/pause button functionality
 
 // function toggleAudio() {
@@ -50,29 +55,325 @@ function genBoth() {
 function playAudio() {
     let selectScale = document.getElementById("scale").innerHTML
     let selectMode = document.getElementById("mode").innerHTML
+    let audio = document.querySelector('audio')
+    let src = document.getElementById('audioSrc')
 
     if (selectScale === "Ab") {
-        let audio = document.querySelector("audio")
         if(selectMode === "Aeolian") {
-            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-aeolian.wav'
+           document.getElementById("audioSrc").setAttribute('src', 'audio/a-flat-modes/a-flat-aeolian.wav'); 
+           document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
         } else if(selectMode === "Dorian") {
-            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-dorian.wav'
+            document.getElementById("audioSrc").setAttribute('src', 'audio/a-flat-modes/a-flat-dorian.wav'); 
+            document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
         } else if(selectMode === "Ionian") {
-            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-ionian.wav'
+            document.getElementById("audioSrc").setAttribute('src', 'audio/a-flat-modes/a-flat-ionian.wav');
+            document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
         } else if(selectMode === "Locrian") {
-            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-locrian.wav'
+            document.getElementById("audioSrc").setAttribute('src', 'audio/a-flat-modes/a-flat-locrian.wav');
+            document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
         } else if(selectMode === "Lydian") {
-            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-lydian.wav'
+            document.getElementById("audioSrc").setAttribute('src', 'audio/a-flat-modes/a-flat-lydian.wav');
+            document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
         } else if(selectMode === "Mixolydian") {
-            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-mixolydian.wav'
+            document.getElementById("audioSrc").setAttribute('src', 'audio/a-flat-modes/a-flat-mixolydian.wav');
+            document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
         } else if(selectMode === "Phrygian") {
-            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-phrygian.wav'
+            document.getElementById("audioSrc").setAttribute('src', 'audio/a-flat-modes/a-flat-phrygian.wav');
+            document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
         }
-    } 
+    }
+    
+    else if (selectScale === "A") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/a-modes/a-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/a-modes/a-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/a-modes/a-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/a-modes/a-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/a-modes/a-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/a-modes/a-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/a-modes/a-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+    
+    else if (selectScale === "Bb") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/b-flat-modes/b-flat-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-flat-modes/b-flat-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-flat-modes/b-flat-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-flat-modes/b-flat-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-flat-modes/b-flat-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-flat-modes/b-flat-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-flat-modes/b-flat-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "B") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/b-modes/b-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-modes/b-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-modes/b-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-modes/b-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-modes/b-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-modes/b-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/b-modes/b-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "C") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/c-modes/c-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-modes/c-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-modes/c-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-modes/c-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-modes/c-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-modes/c-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-modes/c-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "C#") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/c-sharp-modes/c-sharp-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-sharp-modes/c-sharp-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-sharp-modes/c-sharp-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-sharp-modes/c-sharp-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-sharp-modes/c-sharp-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-sharp-modes/c-sharp-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/c-sharp-modes/c-sharp-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "D") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/d-modes/d-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/d-modes/d-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/d-modes/d-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/d-modes/d-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/d-modes/d-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/d-modes/d-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/d-modes/d-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "Eb") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/e-flat-modes/e-flat-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-flat-modes/e-flat-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-flat-modes/e-flat-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-flat-modes/e-flat-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-flat-modes/e-flat-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-flat-modes/e-flat-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-flat-modes/e-flat-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "E") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/e-modes/e-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-modes/e-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-modes/e-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-modes/e-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-modes/e-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-modes/e-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/e-modes/e-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "F") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/f-modes/f-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-modes/f-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-modes/f-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-modes/f-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-modes/f-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-modes/f-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-modes/f-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "F#") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/f-sharp-modes/f-sharp-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-sharp-modes/f-sharp-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-sharp-modes/f-sharp-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-sharp-modes/f-sharp-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-sharp-modes/f-sharp-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-sharp-modes/f-sharp-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/f-sharp-modes/f-sharp-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    else if (selectScale === "G") {
+        if(selectMode === "Aeolian") {
+            document.getElementById("audioSrc").setAttribute('src', 'audio/g-modes/g-aeolian.wav'); 
+            document.querySelector('p').innerHTML = "Aeolian is the sixth mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor third, minor sixth, and minor seventh."
+         } else if(selectMode === "Dorian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/g-modes/g-dorian.wav'); 
+             document.querySelector('p').innerHTML = "Dorian is the second mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the Major sixth."
+         } else if(selectMode === "Ionian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/g-modes/g-ionian.wav');
+             document.querySelector('p').innerHTML = "Ionian is the first mode. There are no alterations in this one, it is simply a Major Scale."
+         } else if(selectMode === "Locrian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/g-modes/g-locrian.wav');
+             document.querySelector('p').innerHTML = "Locrian is the seventh mode. Scale degrees 1 3 5 7 spell out a half diminished seventh chord. This is unique because most of the notes are altered from the typical Major Scale."
+         } else if(selectMode === "Lydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/g-modes/g-lydian.wav');
+             document.querySelector('p').innerHTML = "Lydian is the fourth mode. Scale degrees 1 3 5 7 spell out a Major seventh chord. This is unique because of the sharp fourth."
+         } else if(selectMode === "Mixolydian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/g-modes/g-mixolydian.wav');
+             document.querySelector('p').innerHTML = "Mixolydian is the fifth mode. Scale degrees 1 3 5 7 spell out a Dominant seventh chord. This is unique because of the flat seventh."
+         } else if(selectMode === "Phrygian") {
+             document.getElementById("audioSrc").setAttribute('src', 'audio/g-modes/g-phrygian.wav');
+             document.querySelector('p').innerHTML = "Phrygian is the third mode. Scale degrees 1 3 5 7 spell out a minor seventh chord. This is unique because of the minor second."
+         }
+    }
+
+    audio.load()
+    
 }
 
-// toggleAudio()
-playAudio()
+
+// function playAudio () {
+//     let selectScale = document.getElementById("scale").innerHTML
+//     let selectMode = document.getElementById("mode").innerHTML   
+
+//     if (selectScale === 'Ab') {
+//        if (selectMode === 'aolian') {
+        
+//        } 
+//     }
+// }
+
 //Scale objects with modes as methods?
 
 const scaleAFlat = {
