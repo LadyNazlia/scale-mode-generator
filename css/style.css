@@ -67,12 +67,28 @@ audio {
 } */
 
 /******************************************
-/* Index2 STYLES
+/* ADDITIONAL STYLES
 /*******************************************/
 
 html {
   background-color: black;
   color: whitesmoke;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-areas: 
+  'title title title title title title'
+  'nav nav scale scale mode mode'
+  'nav nav buttons buttons buttons buttons'
+  'nav nav audioPlayer audioPlayer audioPlayer audioPlayer';
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  padding: 10px;
+  gap: 20px;
+  /* height: 100%; */
+  
 }
 
 .gridItem0 {
@@ -82,6 +98,7 @@ html {
 .gridItem1 {
   grid-area: nav;
 }
+
 .gridItem2 {
   grid-area: scale;
 
@@ -101,18 +118,6 @@ html {
   background-color: #666666;
 }
 
-.container {
-  display: grid;
-  grid-template-areas: 
-  'title title title'
-  'nav scale mode'
-  'nav buttons buttons'
-  'nav audioPlayer audioPlayer';
-  padding: 10px;
-  gap: 20px;
-  height: 100%;
-  grid-template-rows: 33px -1fr;
-}
 .title, .scale, .mode, .buttons, .nav, .audioPlayer {
   border: 2px solid whitesmoke; 
   border-radius: 25px;
@@ -126,9 +131,9 @@ html {
 
 .nav {
   text-align: center;
-  height: 400px;
+  /* height: 400px; */
   font-size: 2rem;
-  width: 50%;
+  
 }
 
 .buttons {
@@ -199,7 +204,6 @@ img {
   height: 300px;
   width: 50%;
 }
-
 .nav h3 {
   width: 75%;
   margin-top: -75px;
@@ -213,5 +217,6 @@ img {
 p {
   font-size: 1rem;
   width: 75%;
-  margin: 1% 12%;
+  margin: 4% 12%;
+  
 }

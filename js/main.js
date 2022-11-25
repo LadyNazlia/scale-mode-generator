@@ -1,7 +1,7 @@
 document.querySelector("#modeBut").addEventListener('click', modeSelect)
 document.querySelector("#scaleBut").addEventListener('click', scaleSelect)
 document.querySelector("#bothBut").addEventListener('click', genBoth)
-document.querySelector("audio").addEventListener('click', toggleAudio)
+// document.querySelector("audio").addEventListener('click', toggleAudio)
 
 
 //Chooses random scale and displays it
@@ -11,8 +11,6 @@ function scaleSelect() {
     var rand_index = Math.floor(Math.random() * scale.length);
 
     let randScale = scale[rand_index];
-
-    console.log(randScale);
 
     document.querySelector("#scale").innerHTML = `${randScale}`;
    
@@ -37,42 +35,44 @@ function genBoth() {
 
 //play/pause button functionality
 
-function toggleAudio() {
-    if (audio.paused) {
-        audio.play();
-        playerButton.innerHTML = pauseIcon;
-    } else {
-        audio.pause();
-        playerButton.innerHTML = playIcon;
-    }
-}
+// function toggleAudio() {
+//     if (audio.paused) {
+//         audio.play();
+//         playerButton.innerHTML = pauseIcon;
+//     } else {
+//         audio.pause();
+//         playerButton.innerHTML = playIcon;
+//     }
+// }
 
-//play scale based on what is generated with genBoth()
+//play scale based on what is generated with genBoth() or scaleSelect()/modeSelect()
 
 function playAudio() {
-    let selectScale = document.getElementById("#scale").innerHTML
-    let selectMode = document.getElementById("#mode").innerHTML
+    let selectScale = document.getElementById("scale").innerHTML
+    let selectMode = document.getElementById("mode").innerHTML
 
-    if (selectScale === "Scale: Ab") {
+    if (selectScale === "Ab") {
         let audio = document.querySelector("audio")
-        if(selectMode === "Mode: Aeolian") {
-            audio.src = scaleAFlat.aeolian
-        } else if(selectMode === "Mode: Dorian") {
-            audio.src = scaleAFlat.dorian
-        } else if(selectMode === "Mode: Ionian") {
-            audio.src = scaleAFlat.ionian
-        } else if(selectMode === "Mode: Locrian") {
-            audio.src = scaleAFlat.locrian
-        } else if(selectMode === "Mode: Lydian") {
-            audio.src = scaleAFlat.lydian
-        } else if(selectMode === "Mode: Mixolydian") {
-            audio.src =  scaleAFlat.mixolydian
-        } else if(selectMode === "Mode: Phrygian") {
-            audio.src = scaleAFlat.phrygian
+        if(selectMode === "Aeolian") {
+            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-aeolian.wav'
+        } else if(selectMode === "Dorian") {
+            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-dorian.wav'
+        } else if(selectMode === "Ionian") {
+            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-ionian.wav'
+        } else if(selectMode === "Locrian") {
+            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-locrian.wav'
+        } else if(selectMode === "Lydian") {
+            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-lydian.wav'
+        } else if(selectMode === "Mixolydian") {
+            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-mixolydian.wav'
+        } else if(selectMode === "Phrygian") {
+            document.getElementById('audioSrc').source.src = 'asset/a-flat-modes/a-flat-phrygian.wav'
         }
     } 
 }
 
+// toggleAudio()
+playAudio()
 //Scale objects with modes as methods?
 
 const scaleAFlat = {
