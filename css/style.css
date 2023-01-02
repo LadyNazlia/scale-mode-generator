@@ -8,66 +8,7 @@
 }
 
 /******************************************
-/* LAYOUT
-/*******************************************/
-
-/* body {
-  background-image: url(img/music-note-BG.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  font-family: 'Titillium Web', sans-serif;
-}
-
-h1 {
-  margin-left: 33%;
-  margin-top: 5%;
-}
-
-h2, p {
-  text-align: center;
-}
-
-p {
-  font-size: 1.25rem;
-}
-section {
-  margin-left: 25%;
-  width: 50%;
-  background: black;
-  color: white;
-  border-radius: 3%;
-  border: 10px solid red;
-  height: 20%;
-}
-
-input {
-  width: 25%;
-  margin: 5% 2%;
-  background: red;
-  border: 1px solid red;
-  border-radius: 3px;
-  color: white;
-}
-
-#bothBut {
-  margin-top: 2%;
-}
-
-#scaleBut {
-  margin-left: 8%;
-}
-#mode, #scale {
-  height: 20%;
-}
-
-audio {
-  margin: 0 25% 3% 25%;
-  background-color: red;
-} */
-
-/******************************************
-/* ADDITIONAL STYLES
+/* BASIC STYLES
 /*******************************************/
 
 html {
@@ -196,23 +137,6 @@ img {
   height: 200px;
   width: 100%;
 }
-
-/* .nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 300px;
-  width: 50%;
-}
-.nav h3 {
-  width: 75%;
-  margin-top: -75px;
-}
-
-.modeName {
-  width: 75%%;
-  margin: 1% 12%;
-} */
 
 p {
   font-size: 1.5rem;
